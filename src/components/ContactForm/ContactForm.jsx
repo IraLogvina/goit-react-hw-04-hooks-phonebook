@@ -3,7 +3,7 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import style from "./ContactForm.module.css";
 
-function ContactForm({ onSubmit }) {
+function ContactForm({ addContact }) {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
 
@@ -29,7 +29,7 @@ function ContactForm({ onSubmit }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    onSubmit({ name, number });
+    addContact( name, number );
     reset();
   };
 
