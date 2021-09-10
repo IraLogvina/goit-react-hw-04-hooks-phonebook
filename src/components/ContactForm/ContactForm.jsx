@@ -1,4 +1,4 @@
-// import React, { Component } from "react";
+import React from "react";
 import { useState } from "react";
 import PropTypes from "prop-types";
 import style from "./ContactForm.module.css";
@@ -29,7 +29,7 @@ function ContactForm({ addContact }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addContact( name, number );
+    addContact({ name, number });
     reset();
   };
 
