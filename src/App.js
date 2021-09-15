@@ -20,6 +20,10 @@ function App() {
     }
   }, []);
 
+  useEffect(() => {
+    window.localStorage.setItem("contacts", JSON.stringify(contacts));
+  }, [contacts]);
+  
   const addContact = (contactFormState) => {
     const { name, number } = contactFormState;
     const newContact = {
